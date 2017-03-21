@@ -6,8 +6,11 @@ public class cha : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        bool supportsMultiTouch = Input.multiTouchEnabled;
+
+        print("MultiTouchSupport : " + supportsMultiTouch);
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
