@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Tłum_test : MonoBehaviour
 {
     public float dist = 0; //dystans między tłumem a graczem
+    public float d = 1f;  //odległość która umożliwia tłumowi złapanie gracza
     public Transform gracz;
     public Transform tłum;
     Vector3 startpos;     // pozycja startowa tłumu
@@ -35,12 +36,12 @@ public class Tłum_test : MonoBehaviour
 
         
         
-        if (dist > 2) // tłum porusza się póki nie złapie gracza
+        if (dist > d) // tłum porusza się póki nie złapie gracza
         {
             transform.Translate(new Vector3(1, 0, 0) * Time.deltaTime);
         }
 
-        if (dist < 2) // tłum złapał gracza
+        if (dist < d) // tłum złapał gracza
         {
             QTE.SetActive(true); //włącza się QTE
 
